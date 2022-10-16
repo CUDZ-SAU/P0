@@ -2,7 +2,8 @@ classdef p0
     %P0 Summary of this class goes here
     %   Detailed explanation goes here
 
-    properties        
+    properties(Constant)        
+        this_validate_NIA = @p0.validate_NIA
     end
 
     methods(Static)
@@ -18,7 +19,7 @@ classdef p0
                 nia2 = 0;
             end
             if nia2 ~= 0
-                p0.validate_NIA(nia2);
+                this_validate_NIA(nia2);
             end
 
             if nia1 == 0 && nia2 == 0
